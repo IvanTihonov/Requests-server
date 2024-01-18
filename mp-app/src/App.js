@@ -17,7 +17,7 @@ export const App = () => {
         {todos.map(({ id, title, completed }) => (
           <Todo key={id} title={title} completed={completed} /> 
         ))}
-      </div>
+      </div>  
     </div>
   );
 };
