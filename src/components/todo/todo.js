@@ -1,4 +1,4 @@
-import { Button } from '../button/button';
+import { Button, } from '../button/button';
 import styles from './todo.module.css';
 
 export const Todo = ({ 
@@ -9,7 +9,7 @@ export const Todo = ({
     onTitleChange, 
     onCompletedChange, 
     onSave, 
-    onRemove, 
+    onRemove,
 }) => {
     return (
         <div className={styles.todo}>
@@ -21,14 +21,14 @@ export const Todo = ({
             />
             <div className={styles.title}>
                 {isEditing ? (
-                    <input type="text" value={title} onChange={({ target}) => onTitleChange(target.value)} 
+                    <input type="text" value={title} onChange={({ target }) => onTitleChange(target.value)} 
                     />
                 ) : (
                     <div onClick={onEdit}>{title}</div>
                 )}
             </div>
             <div>
-            {isEditing ? (
+                {isEditing ? (
                     <Button onClick={onSave}>✎</Button>
                 ) : (
                     <Button onClick={onRemove}>✖</Button>

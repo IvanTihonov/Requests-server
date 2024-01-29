@@ -13,11 +13,13 @@ export const readTodos = (searchPhrase = '', isAlphabetSorting = false) => {
 		snapshot.forEach((todoSnapshot) => {
 			const id = todoSnapshot.key;
 			const { title, completed } = todoSnapshot.val();
-			loadedTodos.push({ id, title, completed});
+			loadedTodos.push({ id, title, completed });
 		});
 
 		if (searchPhrase !== '') {
-			loadedTodos = loadedTodos.filter(({ title }) => title.toLowerCase().indexOf(searchPhrase.toLowerCase()) >= 0,
+			loadedTodos = loadedTodos.filter(
+				({ title }) => 
+					title.toLowerCase().indexOf(searchPhrase.toLowerCase()) >= 0,
 			);
 		}
 

@@ -19,7 +19,9 @@ export const Sorting = ({ onSorting }) => {
                 checked={isEnabled}
                 onChange={onChange}
             />
-            <label className={styles.label} htmlFor="sorting-button">A&darr;</label>
+            <label className={styles.label} htmlFor="sorting-button">
+                A&darr;
+            </label>
         </Button>
     );
 };

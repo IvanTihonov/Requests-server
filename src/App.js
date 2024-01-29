@@ -76,7 +76,9 @@ export const App = () => {
             isEditing={isEditing}
             onEdit={() => onTodoEdit(id)} 
             onTitleChange={(newTitle) => onTodoTitleChange(id, newTitle)}
-            onCompletedChange={(newCompleted) => onTodoCompletedChange(id, newCompleted)}
+            onCompletedChange={(newCompleted) => 
+              onTodoCompletedChange(id, newCompleted)
+            }
             onSave={() => onTodoSave(id)} 
             onRemove={() => onTodoRemove(id)}
           /> 
